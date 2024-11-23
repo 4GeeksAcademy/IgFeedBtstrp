@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+    <title>Instagram Feed</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="col-12"> <!-- Instagram Nav-->
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <div class="d-flex align-items-baseline mx-4">
+                            <i class="fa-brands fa-instagram me-2"></i>
+                            <h5>Instagram</h5>
+                        </div>
+                    </a>
+                    <div class="d-flex mx-4">
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Create a new post</button> <!-- Boton new post-->
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label class="mb-2" for="floatingTextarea">Caption:</label>
+                                        <textarea class="form-control" placeholder="Add the caption of your post here:" id="floatingTextarea"></textarea>
+                                        <button type="button" class="btn btn-outline-secondary mt-3 me-2"><i class="fa-solid fa-camera"></i></button>
+                                        <button type="button" class="btn btn-outline-secondary mt-3"><i class="fa-solid fa-location-dot"></i></button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-success">Publish</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="btn-group mx-2"> <!-- Boton configuracion-->
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-gear"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li><a class="dropdown-item" href="#">Profile</a></li>
+                              <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                              <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+              </nav>
+        </div>
+        <div class="row justify-content-center"> <!-- Cells -->
+            <nav>
+                <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                    <button class="nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                        <i class="fa-solid fa-table-cells"></i>
+                    </button>
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                        <i class="fa-solid fa-square"></i>
+                    </button>
+                </div>
+            </nav>
+              <div class="tab-content" id="nav-tabContent"> 
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0"><!-- Contenido 1 -->
+                    <div class="row mx-4 content-feed">
+                        <div class="col-4 mb-3">
+                            <img  src="https://media.istockphoto.com/id/1325533717/es/foto/perro-bulldog-franc%C3%A9s-leonado-rojo-con-un-divertido-disfraz-de-uniforme-de-oficial-de-polic%C3%ADa.jpg?s=612x612&w=0&k=20&c=HzJxpG0KgFb-VV3HWySwx_DWH1HzjGV5kaRnl8o3CKQ=" 
+                            alt="" >
+                        </div>
+                        <div class="col-4 mb-3">
+                            <img src="https://ca-times.brightspotcdn.com/dims4/default/87d4e87/2147483647/strip/true/crop/3062x2133+0+0/resize/1200x836!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fdc%2F5c%2F01df4472d605dbe35f57435a7d13%2Fad1a1f65724345998956cdbad84cb99f" 
+                            alt="">
+                        </div>
+                        <div class="col-4 mb-3">
+                            <img src="https://i0.wp.com/perrillosalamar.wordpress.com/wp-content/uploads/2016/10/perros-disfrazados-131.jpg?w=490&h=597&ssl=1" 
+                            alt="">
+                        </div>
+                        <!-- 2 -->
+                        <div class="col-4 mb-3">
+                            <img  src="https://i.pinimg.com/736x/4e/17/d3/4e17d34b4bb50eddfd5842a75cb149a6.jpg" 
+                            alt="" >
+                        </div>
+                        <div class="col-4 mb-3">
+                            <img src="https://i.blogs.es/30c7e6/disfraces-de-halloween-para-perros/450_1000.jpeg" 
+                            alt="">
+                        </div>
+                        <div class="col-4 mb-3">
+                            <img src="https://media.assettype.com/mimorelia%2Fimport%2F2019%2F10%2Fnoticias%2F27%2Fmimorelia_desfile_perritos_morelia.jpg?w=480&auto=format%2Ccompress&fit=max" 
+                            alt="">
+                        </div>
+                        <!-- 3 -->
+                        <div class="col-4 mb-3">
+                            <img  src="https://m.media-amazon.com/images/I/71aysRC2r8L._AC_UF894,1000_QL80_.jpg" 
+                            alt="" >
+                        </div>
+                        <div class="col-4 mb-3">
+                            <img src="https://pbs.twimg.com/media/DM4G_hbUQAAWkG7.jpg" 
+                            alt="">
+                        </div>
+                        <div class="col-4 mb-3">
+                            <img src="https://www.okchicas.com/wp-content/uploads/2018/10/Disfraces-de-halloween-para-perro-3.jpg" 
+                            alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0"><!-- Contenido 2 -->
+                    <div class="col">
+                        <!-- 1 -->
+                        <div class="card mx-auto mb-5" style="width: 45rem;">
+                            <div class="card-body d-flex justify-content-between">
+                                <h2>The Police Dog</h2>
+                                <p class="fw-semibold">06/24</p>
+                            </div>
+                            <img src="https://media.istockphoto.com/id/1325533717/es/foto/perro-bulldog-franc%C3%A9s-leonado-rojo-con-un-divertido-disfraz-de-uniforme-de-oficial-de-polic%C3%ADa.jpg?s=612x612&w=0&k=20&c=HzJxpG0KgFb-VV3HWySwx_DWH1HzjGV5kaRnl8o3CKQ=" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h6 class="card-title">505 Likes</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="card mx-auto mb-5" style="width: 45rem;">
+                            <div class="card-body d-flex justify-content-between">
+                                <h2>Super Dog</h2>
+                                <p class="fw-semibold">06/30</p>
+                            </div>
+                            <img src="https://ca-times.brightspotcdn.com/dims4/default/87d4e87/2147483647/strip/true/crop/3062x2133+0+0/resize/1200x836!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fdc%2F5c%2F01df4472d605dbe35f57435a7d13%2Fad1a1f65724345998956cdbad84cb99f" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h6 class="card-title">500 Likes</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="card mx-auto mb-5" style="width: 45rem;">
+                            <div class="card-body d-flex justify-content-between">
+                                <h2>The Bride</h2>
+                                <p class="fw-semibold">07/10</p>
+                            </div>
+                            <img src="https://i0.wp.com/perrillosalamar.wordpress.com/wp-content/uploads/2016/10/perros-disfrazados-131.jpg?w=490&h=597&ssl=1" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h6 class="card-title">340 Likes</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="card mx-auto mb-5" style="width: 45rem;">
+                            <div class="card-body d-flex justify-content-between">
+                                <h2>Frankendog</h2>
+                                <p class="fw-semibold">07/13</p>
+                            </div>
+                            <img src="https://i.pinimg.com/736x/4e/17/d3/4e17d34b4bb50eddfd5842a75cb149a6.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h6 class="card-title">705 Likes</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <!-- 5 -->
+                        <div class="card mx-auto mb-5" style="width: 45rem;">
+                            <div class="card-body d-flex justify-content-between">
+                                <h2>Chucky</h2>
+                                <p class="fw-semibold">07/14</p>
+                            </div>
+                            <img src="https://i.blogs.es/30c7e6/disfraces-de-halloween-para-perros/450_1000.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h6 class="card-title">600 Likes</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <!-- 6 -->
+                        <div class="card mx-auto mb-5" style="width: 45rem;">
+                            <div class="card-body d-flex justify-content-between">
+                                <h2>Little Seal</h2>
+                                <p class="fw-semibold">07/25</p>
+                            </div>
+                            <img src="https://media.assettype.com/mimorelia%2Fimport%2F2019%2F10%2Fnoticias%2F27%2Fmimorelia_desfile_perritos_morelia.jpg?w=480&auto=format%2Ccompress&fit=max" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h6 class="card-title">650 Likes</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <!-- 7 -->
+                        <div class="card mx-auto mb-5" style="width: 45rem;">
+                            <div class="card-body d-flex justify-content-between">
+                                <h2>Perris Presley</h2>
+                                <p class="fw-semibold">07/28</p>
+                            </div>
+                            <img src="https://m.media-amazon.com/images/I/71aysRC2r8L._AC_UF894,1000_QL80_.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h6 class="card-title">1005 Likes</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <!-- 8 -->
+                        <div class="card mx-auto mb-5" style="width: 45rem;">
+                            <div class="card-body d-flex justify-content-between">
+                                <h2>Perrywise</h2>
+                                <p class="fw-semibold">08/05</p>
+                            </div>
+                            <img src="https://pbs.twimg.com/media/DM4G_hbUQAAWkG7.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h6 class="card-title">900 Likes</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                        <!-- 9 -->
+                        <div class="card mx-auto mb-5" style="width: 45rem;">
+                            <div class="card-body d-flex justify-content-between">
+                                <h2>La momia</h2>
+                                <p class="fw-semibold">08/15</p>
+                            </div>
+                            <img src="https://www.okchicas.com/wp-content/uploads/2018/10/Disfraces-de-halloween-para-perro-3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h6 class="card-title">340 Likes</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/9317647987.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+</body>
+</html>

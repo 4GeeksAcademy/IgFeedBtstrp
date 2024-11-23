@@ -1,0 +1,22 @@
+.content-feed img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.nav-tabs{
+    border-bottom: none !important;
+}
+.nav-link {
+    color: #495057 !important;
+}
+.nav-tabs .nav-link{
+    border: none !important;
+}
+.nav-tabs .nav-link.active {
+    color: #0d6efd !important;
+    background-color: unset !important;
+}
+
+body{
+    font-family: nunito !important;
+}
